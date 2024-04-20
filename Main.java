@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        int[] elementos = generarElementos(10000); // Cambia el tamaño según lo indicado por el profesor
+        int[] elementos = generarElementos(10000);
         LinkedList listaEnlazada = new LinkedList();
-        BinarySearchTree arbolBST = new BinarySearchTree();
+        BinarySear|chTree arbolBST = new BinarySearchTree();
 
         // Insertar elementos en ambas estructuras
         for (int elemento : elementos) {
@@ -16,12 +16,12 @@ public class Main {
 
         // Realizar búsquedas aleatorias y medir el tiempo
         Random rand = new Random();
-        final int NUM_BUSQUEDAS = 100; // Cambia según lo indicado por el profesor
+        final int NUM_BUSQUEDAS = 100;
         long tiempoLista = 0;
         long tiempoArbol = 0;
 
         for (int i = 0; i < NUM_BUSQUEDAS; i++) {
-            int elementoBuscar = elementos[rand.nextInt(elementos.length)]; // Elemento aleatorio a buscar
+            int elementoBuscar = elementos[rand.nextInt(elementos.length)];
 
             long startTime = System.nanoTime();
             listaEnlazada.search(elementoBuscar);
@@ -39,7 +39,7 @@ public class Main {
         System.out.println("Tiempo promedio de búsqueda en árbol binario de búsqueda: " + (tiempoArbol / NUM_BUSQUEDAS) + " nanosegundos");
     }
 
-    // Método para generar elementos aleatorios
+
     public static int[] generarElementos(int cantidad) {
         int[] elementos = new int[cantidad];
         Random rand = new Random();
